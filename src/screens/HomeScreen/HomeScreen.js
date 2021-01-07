@@ -15,6 +15,7 @@ import ic_logo from '../../assets/images/rc_logo.png';
 import ic_twiter from '../../assets/images/twiter.png';
 import InputForm from './component/InputForm';
 import styles from './styles';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -31,6 +32,7 @@ const HomeScreen = () => {
         source={ic_logo}
         style={{height: 93, alignSelf: 'center'}}
       />
+      <Icon name="checks" size={30} color="#900" />
       <View style={styles.boxForm}>
         <ScrollView showsVerticalScrollIndicator={false} style={{flex: 1}}>
           <Text style={styles.hello}>Hello</Text>
