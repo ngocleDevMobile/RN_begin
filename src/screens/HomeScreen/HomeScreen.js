@@ -17,8 +17,7 @@ import InputForm from './component/InputForm';
 import styles from './styles';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-const HomeScreen = () => {
-  const navigation = useNavigation();
+const HomeScreen = ({navigation: {navigate, goBack}}) => {
   const [check, setCheck] = useState(true);
   return (
     <View style={styles.container}>
@@ -32,7 +31,6 @@ const HomeScreen = () => {
         source={ic_logo}
         style={{height: 93, alignSelf: 'center'}}
       />
-      <Icon name="checks" size={30} color="#900" />
       <View style={styles.boxForm}>
         <ScrollView showsVerticalScrollIndicator={false} style={{flex: 1}}>
           <Text style={styles.hello}>Hello</Text>
@@ -68,7 +66,7 @@ const HomeScreen = () => {
             }}>
             Forgot Password?
           </Text>
-          <TouchableOpacity style={styles.btnLogin}>
+          <TouchableOpacity style={styles.btnLogin} onPress={() => navigate('Setting', {value: 'abc'})}>
             <Text
               style={{color: '#fff', fontFamily: 'Raleway-Bold', fontSize: 16}}>
               LOGIN
