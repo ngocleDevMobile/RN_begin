@@ -110,6 +110,7 @@ const SettingScreen = ({navigation: {navigate, goBack}, route}) => {
         });
         console.log("Huy dev");
         setData(listUser);
+        console.log("Check----");
       });
 
     // Stop listening for updates when no longer required
