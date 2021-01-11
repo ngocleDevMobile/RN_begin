@@ -108,6 +108,7 @@ const SettingScreen = ({navigation: {navigate, goBack}, route}) => {
             age: item[1].age,
           });
         });
+        console.log("Huy dev");
         setData(listUser);
       });
 
