@@ -16,9 +16,12 @@ import ic_twiter from '../../assets/images/twiter.png';
 import InputForm from './component/InputForm';
 import styles from './styles';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import {useDispatch, useSelector} from 'react-redux'
 
 const HomeScreen = ({navigation: {navigate, goBack}}) => {
   const [check, setCheck] = useState(true);
+  const times = useSelector((state) => state.counterReducers);
+  console.log("Home"+times);
   return (
     <View style={styles.container}>
       <StatusBar
