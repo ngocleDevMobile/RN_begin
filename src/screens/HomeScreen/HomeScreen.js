@@ -66,7 +66,7 @@ const HomeScreen = ({navigation: {navigate, goBack}}) => {
             }}>
             Forgot Password?
           </Text>
-          <TouchableOpacity style={styles.btnLogin} onPress={() => navigate('Setting', {value: 'abc'})}>
+          <TouchableOpacity style={styles.btnLogin} onPress={() => navigate('TabScreen', {value: 'abc'})}>
             <Text
               style={{color: '#fff', fontFamily: 'Raleway-Bold', fontSize: 16}}>
               LOGIN
